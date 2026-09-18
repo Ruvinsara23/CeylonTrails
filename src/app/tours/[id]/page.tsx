@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { MapPin, Clock, Check, Star, ArrowRight, Activity, Camera, Leaf } from 'lucide-react';
-import { tourPackages } from '@/data/mock';
+import { tourPackages } from '../../../../data/mock';
 
 export default function TourDetailPage({ params }: { params: { id: string } }) {
   const tour = tourPackages.find((pkg) => pkg.id === params.id);

@@ -28,7 +28,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="section-padding bg-pearl-50">
+    <section id="faq" className="section-padding bg-pearl-50">
       <div className="container-wide px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <ScrollReveal>

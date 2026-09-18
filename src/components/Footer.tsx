@@ -51,9 +51,8 @@ export default function Footer() {
             <h4 className="font-heading font-semibold text-white tracking-widest uppercase text-sm mb-6">Company</h4>
             <ul className="space-y-4 text-sm font-light text-forest-200">
               <li><Link href="/about" className="hover:text-gold-400 transition-colors">The Curator</Link></li>
-              <li><Link href="/sustainability" className="hover:text-gold-400 transition-colors">Sustainability Promise</Link></li>
               <li><Link href="/contact" className="hover:text-gold-400 transition-colors">Contact Us</Link></li>
-              <li><Link href="/faq" className="hover:text-gold-400 transition-colors">FAQ</Link></li>
+              <li><Link href="/#faq" className="hover:text-gold-400 transition-colors">FAQ</Link></li>
             </ul>
           </div>
 
@@ -82,8 +81,8 @@ export default function Footer() {
         <div className="pt-8 border-t border-forest-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light text-forest-400">
           <p>&copy; {currentYear} Ceylon Trails Ltd. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

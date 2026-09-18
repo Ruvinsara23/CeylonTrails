@@ -25,7 +25,7 @@ export default function ToursPage() {
       {/* Hero Banner */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <Image
-          src="https://picsum.photos/seed/tourshero/1920/1080"
+          src="/images/ella_tea_1789732031029.png"
           alt="Sri Lankan tea plantations at golden hour"
           fill
           className="object-cover"

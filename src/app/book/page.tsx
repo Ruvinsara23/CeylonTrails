@@ -33,36 +33,39 @@ function BookingFormContent() {
     <>
       {/* Progress Bar */}
       <div className="mb-12">
-        <div className="flex items-center justify-between max-w-lg mx-auto">
+        <div className="flex justify-between items-start max-w-lg mx-auto relative px-2">
+          {/* Background line for connectors */}
+          <div className="absolute top-5 left-8 right-8 h-0.5 bg-pearl-300 -z-10" />
+          
+          {/* Active line for connectors */}
+          <div className="absolute top-5 left-8 h-0.5 bg-forest-950 transition-all duration-500 ease-out -z-10" style={{ width: `calc(${((step - 1) / (steps.length - 1)) * 100}% - 4rem)` }} />
+          
           {steps.map((s, i) => (
-            <div key={s.number} className="flex items-center">
-              <div className="flex flex-col items-center">
-                <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center font-heading font-bold text-sm transition-all duration-300 ${
-                    step >= s.number
-                      ? step === s.number
-                        ? 'bg-gold-500 text-forest-950 shadow-lg shadow-gold-500/30'
-                        : 'bg-forest-950 text-gold-400'
-                      : 'bg-pearl-300 text-pearl-500'
-                  }`}
-                >
-                  {step > s.number ? '✓' : s.number}
-                </div>
-                <span
-                  className={`text-xs mt-2 font-medium tracking-widest uppercase transition-colors ${
-                    step >= s.number ? 'text-forest-950' : 'text-pearl-400'
-                  }`}
-                >
-                  {s.label}
-                </span>
+            <div key={s.number} className="flex flex-col items-center flex-1 relative z-10">
+              <div
+                className={`w-10 h-10 rounded-full flex items-center justify-center font-heading font-bold text-sm transition-all duration-300 ${
+                  step >= s.number
+                    ? step === s.number
+                      ? 'bg-gold-500 text-forest-950 shadow-lg shadow-gold-500/30'
+                      : 'bg-forest-950 text-gold-400'
+                    : 'bg-pearl-300 text-pearl-500'
+                }`}
+              >
+                {step > s.number ? (
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+                  </svg>
+                ) : (
+                  s.number
+                )}
               </div>
-              {i < steps.length - 1 && (
-                <div
-                  className={`w-12 sm:w-20 h-0.5 mx-2 mb-6 transition-colors duration-300 ${
-                    step > s.number ? 'bg-forest-950' : 'bg-pearl-300'
-                  }`}
-                />
-              )}
+              <span
+                className={`text-[10px] sm:text-xs mt-2 font-medium tracking-widest uppercase transition-colors text-center ${
+                  step >= s.number ? 'text-forest-950' : 'text-pearl-400'
+                }`}
+              >
+                {s.label}
+              </span>
             </div>
           ))}
         </div>

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import { useBooking } from '../../context/BookingContext';
 import { tourPackages } from '../../../data/mock';
 
@@ -21,9 +22,9 @@ export default function StepSuccess() {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: 'spring', stiffness: 200, damping: 15, delay: 0.2 }}
-        className="w-20 h-20 bg-jungle-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
+        className="w-20 h-20 bg-jungle-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-forest-950"
       >
-        <span className="text-4xl">✅</span>
+        <CheckCircleIcon className="w-12 h-12" />
       </motion.div>
 
       <h2 className="font-heading font-bold text-3xl text-gray-900 mb-3">

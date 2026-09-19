@@ -51,7 +51,7 @@ export default function Testimonials() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((testimonial, idx) => (
               <ScrollReveal key={testimonial.id} delay={idx * 0.1} className={idx === 0 ? 'md:col-span-2 lg:col-span-2' : ''}>
-                <div className={`bg-pearl-50 p-8 rounded-3xl border border-pearl-200 shadow-sm flex flex-col h-full ${idx === 0 ? 'bg-forest-950 text-white' : ''}`}>
+                <div className={`p-8 rounded-3xl border border-pearl-200 shadow-sm flex flex-col h-full ${idx === 0 ? 'bg-forest-950 text-white' : 'bg-pearl-50 text-forest-950'}`}>
                   <Quote className={`w-8 h-8 mb-6 ${idx === 0 ? 'text-gold-500' : 'text-pearl-300'}`} />
                   <p className={`text-lg font-light leading-relaxed flex-grow mb-8 ${idx === 0 ? 'text-white md:text-2xl' : 'text-forest-700'}`}>
                     "{testimonial.text}"

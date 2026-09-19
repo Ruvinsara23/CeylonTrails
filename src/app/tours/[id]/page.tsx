@@ -15,7 +15,7 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <main className="bg-pearl-50 pt-24 pb-24">
+    <main className="bg-pearl-50 pb-24">
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[500px] w-full">
         <Image

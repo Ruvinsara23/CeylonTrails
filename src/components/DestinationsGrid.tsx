@@ -37,10 +37,10 @@ export default function DestinationsGrid() {
           {destinations.map((dest, i) => (
             <motion.div
               key={dest.id}
-              initial={{ opacity: 0, x: -50 * i, y: 50, rotate: -5 * i }}
-              whileInView={{ opacity: 1, x: 0, y: 0, rotate: 0 }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, delay: i * 0.1, type: "spring", bounce: 0.2 }}
+              transition={{ duration: 0.7, delay: i * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
             >
               <Link href={`/tours?destination=${dest.id}`} className="block group h-[450px]">
                 <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500">

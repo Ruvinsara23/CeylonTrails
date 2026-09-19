@@ -91,42 +91,42 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="bg-white rounded-3xl lg:rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-2 lg:p-4 flex flex-col lg:flex-row items-center justify-between border border-pearl-200 gap-2 lg:gap-0"
+          className="bg-white rounded-3xl lg:rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-4 flex flex-col lg:flex-row items-stretch justify-between border border-pearl-200 gap-0"
         >
-          <div className="w-full lg:flex-1 flex items-center gap-4 px-4 py-2 lg:py-0 lg:px-6 lg:border-r border-pearl-200">
-            <SolidMapPin className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6" />
+          <div className="w-full lg:flex-1 flex items-center gap-4 px-2 py-4 lg:py-0 lg:px-6 border-b lg:border-b-0 lg:border-r border-pearl-100">
+            <SolidMapPin className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6 shrink-0" />
             <div className="flex-1">
               <p className="font-heading font-bold text-forest-950 text-sm">Where to?</p>
               <p className="text-forest-400 text-xs font-light">Search destinations</p>
             </div>
           </div>
           
-          <div className="w-full lg:flex-1 hidden md:flex items-center gap-4 px-4 py-2 lg:py-0 lg:px-6 lg:border-r border-pearl-200">
-            <SolidCalendar className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6" />
+          <div className="w-full lg:flex-1 hidden md:flex items-center gap-4 px-2 py-4 lg:py-0 lg:px-6 border-b lg:border-b-0 lg:border-r border-pearl-100">
+            <SolidCalendar className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6 shrink-0" />
             <div className="flex-1">
               <p className="font-heading font-bold text-forest-950 text-sm">Check in</p>
               <p className="text-forest-400 text-xs font-light">Add dates</p>
             </div>
           </div>
 
-          <div className="w-full lg:flex-1 hidden md:flex items-center gap-4 px-4 py-2 lg:py-0 lg:px-6 lg:border-r border-pearl-200">
-            <SolidCalendar className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6" />
+          <div className="w-full lg:flex-1 hidden md:flex items-center gap-4 px-2 py-4 lg:py-0 lg:px-6 border-b lg:border-b-0 lg:border-r border-pearl-100">
+            <SolidCalendar className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6 shrink-0" />
             <div className="flex-1">
               <p className="font-heading font-bold text-forest-950 text-sm">Check out</p>
               <p className="text-forest-400 text-xs font-light">Add dates</p>
             </div>
           </div>
 
-          <div className="w-full lg:flex-1 flex items-center gap-4 px-4 py-2 lg:py-0 lg:px-6">
-            <SolidUsers className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6" />
+          <div className="w-full lg:flex-1 flex items-center gap-4 px-2 py-4 lg:py-0 lg:px-6 mb-4 lg:mb-0">
+            <SolidUsers className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6 shrink-0" />
             <div className="flex-1">
               <p className="font-heading font-bold text-forest-950 text-sm">Travelers</p>
               <p className="text-forest-400 text-xs font-light">Add guests</p>
             </div>
           </div>
 
-          <Link href="/book" className="w-full lg:w-auto bg-forest-950 text-white px-6 py-4 lg:px-8 lg:py-4 rounded-2xl lg:rounded-xl font-heading font-semibold flex justify-center lg:justify-start items-center gap-2 hover:bg-gold-500 hover:text-forest-950 transition-colors mt-2 lg:mt-0">
-            Search <SolidSearch className="w-4 h-4" />
+          <Link href="/book" className="w-full lg:w-auto bg-forest-950 text-white px-6 py-4 lg:px-8 lg:py-4 rounded-2xl lg:rounded-xl font-heading font-semibold flex justify-center items-center gap-2 hover:bg-gold-500 hover:text-forest-950 transition-colors shadow-md">
+            Search <SolidSearch className="w-4 h-4 shrink-0" />
           </Link>
         </motion.div>
       </div>

@@ -4,7 +4,7 @@ import { useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { MessageCircle, Mail } from 'lucide-react';
+import { ChatBubbleLeftRightIcon as MessageCircle, EnvelopeIcon as Mail } from '@heroicons/react/24/solid';
 import { BookingProvider, useBooking } from '../../context/BookingContext';
 import StepDates from '../../components/booking/StepDates';
 import StepTravelers from '../../components/booking/StepTravelers';

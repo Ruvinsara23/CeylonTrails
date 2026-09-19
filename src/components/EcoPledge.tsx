@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Leaf, Recycle, Users, Sprout } from 'lucide-react';
+import { SparklesIcon as Leaf, ArrowPathIcon as Recycle, UsersIcon as Users, HeartIcon as Sprout } from '@heroicons/react/24/solid';
 import ScrollReveal from './ScrollReveal';
 
 const pledgeItems = [

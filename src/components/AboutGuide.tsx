@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Languages, ShieldCheck, Camera, Map } from 'lucide-react';
+import { LanguageIcon as Languages, ShieldCheckIcon as ShieldCheck, CameraIcon as Camera, MapIcon as Map } from '@heroicons/react/24/solid';
 import ScrollReveal from './ScrollReveal';
 
 export default function AboutGuide() {

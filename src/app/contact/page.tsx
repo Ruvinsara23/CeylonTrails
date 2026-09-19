@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPinIcon as MapPin, PhoneIcon as Phone, EnvelopeIcon as Mail, ClockIcon as Clock } from '@heroicons/react/24/solid';
 
 export default function ContactPage() {
   return (

@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Compass, Globe, Mail, Phone, MapPin } from 'lucide-react';
+import { GlobeAltIcon as Globe, EnvelopeIcon as Mail, PhoneIcon as Phone, MapPinIcon as MapPin } from '@heroicons/react/24/solid';
+import { MapIcon as Compass } from '@heroicons/react/24/outline';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

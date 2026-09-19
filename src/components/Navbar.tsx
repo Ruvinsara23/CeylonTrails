@@ -4,14 +4,14 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Compass } from 'lucide-react';
+import { Bars3Icon as Menu, XMarkIcon as X, MapIcon as Compass } from '@heroicons/react/24/outline';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const hasDarkHero = pathname === '/' || pathname === '/tours' || pathname === '/destinations' || pathname?.startsWith('/tours/');
+  const hasDarkHero = pathname === '/' || pathname === '/tours' || pathname === '/book' || pathname?.startsWith('/tours/');
   
   // Force scrolled styling if the page doesn't have a dark hero at the top
   const applyScrolledStyle = isScrolled || !hasDarkHero;

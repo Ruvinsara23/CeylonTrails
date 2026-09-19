@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { MapPin, ArrowRight } from 'lucide-react';
+import { MapPinIcon as MapPin, ArrowRightIcon as ArrowRight } from '@heroicons/react/24/solid';
 import { destinations } from '../../../data/mock';
 
 export default function DestinationsPage() {

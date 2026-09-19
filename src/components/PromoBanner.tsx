@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Plane } from 'lucide-react';
+import { ArrowRightIcon as ArrowRight, PaperAirplaneIcon as Plane } from '@heroicons/react/24/solid';
 import ScrollReveal from './ScrollReveal';
 
 export default function PromoBanner() {

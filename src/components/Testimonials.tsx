@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { Star, ShieldCheck, Leaf, Calendar, Quote } from 'lucide-react';
+import { StarIcon as Star, ShieldCheckIcon as ShieldCheck, SparklesIcon as Leaf, CalendarIcon as Calendar } from '@heroicons/react/24/solid';
+import { ChatBubbleLeftRightIcon as Quote } from '@heroicons/react/24/solid';
 import ScrollReveal from './ScrollReveal';
 import { testimonials, trustBadges } from '../../data/mock';
 

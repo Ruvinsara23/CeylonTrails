@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Star, MapPin } from 'lucide-react';
+import { ArrowRightIcon as ArrowRight, StarIcon as Star, MapPinIcon as MapPin } from '@heroicons/react/24/solid';
 import ScrollReveal from './ScrollReveal';
 import { destinations } from '../../data/mock';
 

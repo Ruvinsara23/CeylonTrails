@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Heart, MessageCircle } from 'lucide-react';
+import { HeartIcon as Heart, ChatBubbleLeftRightIcon as MessageCircle } from '@heroicons/react/24/solid';
 import ScrollReveal from './ScrollReveal';
 
 const feedImages = [

@@ -35,7 +35,13 @@ export default function DestinationsGrid() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {destinations.map((dest, i) => (
-            <ScrollReveal key={dest.id} delay={i * 0.1}>
+            <motion.div
+              key={dest.id}
+              initial={{ opacity: 0, x: -50 * i, y: 50, rotate: -5 * i }}
+              whileInView={{ opacity: 1, x: 0, y: 0, rotate: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: i * 0.1, type: "spring", bounce: 0.2 }}
+            >
               <Link href={`/tours?destination=${dest.id}`} className="block group h-[450px]">
                 <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500">
                   <Image
@@ -67,7 +73,7 @@ export default function DestinationsGrid() {
                   </div>
                 </div>
               </Link>
-            </ScrollReveal>
+            </motion.div>
           ))}
         </div>
       </div>

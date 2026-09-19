@@ -48,7 +48,7 @@ export default function ToursPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-pearl-200/90 text-lg max-w-2xl mx-auto font-light"
           >
-            Choose from our carefully crafted experiences — from cultural deep-dives to breathtaking wildlife safaris.
+            Choose from our carefully crafted experiences, from cultural deep-dives to breathtaking wildlife safaris.
           </motion.p>
         </div>
       </section>

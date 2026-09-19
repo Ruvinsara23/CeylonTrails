@@ -1,0 +1,7 @@
+- [x] Fix Navbar Visibility (use usePathname)
+- [x] Fix Empty Testimonial (data/mock.ts)
+- [x] Mobile Hero Section enhancements
+- [x] Filter Bar Text & Professional Icons (remove lucide icons, fix contrast)
+- [x] Itinerary Scroll Micro-Interactions (framer-motion whileInView)
+- [x] Remove Em Dashes (data/mock.ts & tours/page.tsx)
+- [x] Homepage Card Stacking Animation (DestinationsGrid.tsx)

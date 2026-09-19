@@ -2,12 +2,19 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Compass } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const hasDarkHero = pathname === '/' || pathname === '/tours' || pathname === '/destinations' || pathname?.startsWith('/tours/');
+  
+  // Force scrolled styling if the page doesn't have a dark hero at the top
+  const applyScrolledStyle = isScrolled || !hasDarkHero;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +27,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${
-        isScrolled
+        applyScrolledStyle
           ? 'bg-white/95 backdrop-blur-md border-pearl-200 py-4 shadow-sm'
           : 'bg-transparent border-transparent py-6'
       }`}
@@ -28,9 +35,9 @@ export default function Navbar() {
       <div className="container-wide flex items-center justify-between px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <Compass className={`w-8 h-8 transition-colors ${isScrolled ? 'text-forest-950' : 'text-white'}`} />
+          <Compass className={`w-8 h-8 transition-colors ${applyScrolledStyle ? 'text-forest-950' : 'text-white'}`} />
           <span className={`font-heading font-bold text-xl tracking-widest uppercase transition-colors ${
-            isScrolled ? 'text-forest-950' : 'text-white'
+            applyScrolledStyle ? 'text-forest-950' : 'text-white'
           }`}>
             Ceylon<span className="font-light">Trails</span>
           </span>
@@ -38,19 +45,19 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="/destinations" className={`text-sm font-medium transition-colors tracking-wide ${isScrolled ? 'text-forest-950 hover:text-gold-600' : 'text-white/90 hover:text-white'}`}>
+          <Link href="/destinations" className={`text-sm font-medium transition-colors tracking-wide ${applyScrolledStyle ? 'text-forest-950 hover:text-gold-600' : 'text-white/90 hover:text-white'}`}>
             Destinations
           </Link>
-          <Link href="/tours" className={`text-sm font-medium transition-colors tracking-wide ${isScrolled ? 'text-forest-950 hover:text-gold-600' : 'text-white/90 hover:text-white'}`}>
+          <Link href="/tours" className={`text-sm font-medium transition-colors tracking-wide ${applyScrolledStyle ? 'text-forest-950 hover:text-gold-600' : 'text-white/90 hover:text-white'}`}>
             Experiences
           </Link>
-          <Link href="/about" className={`text-sm font-medium transition-colors tracking-wide ${isScrolled ? 'text-forest-950 hover:text-gold-600' : 'text-white/90 hover:text-white'}`}>
+          <Link href="/about" className={`text-sm font-medium transition-colors tracking-wide ${applyScrolledStyle ? 'text-forest-950 hover:text-gold-600' : 'text-white/90 hover:text-white'}`}>
             About Us
           </Link>
           <Link
             href="/contact"
             className={`px-6 py-2.5 rounded-full text-sm font-heading font-bold transition-all duration-300 ${
-              isScrolled 
+              applyScrolledStyle 
                 ? 'bg-forest-950 text-white hover:bg-gold-500 hover:text-forest-950' 
                 : 'bg-white text-forest-950 hover:bg-gold-500 hover:text-forest-950'
             }`}
@@ -61,7 +68,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className={`md:hidden p-2 transition-colors ${isScrolled ? 'text-forest-950' : 'text-white'}`}
+          className={`md:hidden p-2 transition-colors ${applyScrolledStyle ? 'text-forest-950' : 'text-white'}`}
           onClick={() => setIsMobileMenuOpen(true)}
         >
           <Menu className="w-6 h-6" />

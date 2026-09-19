@@ -1,6 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { motion } from 'framer-motion';
 import { MapPin, Clock, Check, Star, ArrowRight, Activity, Camera, Leaf } from 'lucide-react';
 import { tourPackages } from '../../../../data/mock';
 
@@ -74,19 +77,26 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
           {tour.itinerary && (
             <section>
               <h2 className="font-heading font-bold text-3xl text-forest-950 mb-8">Day-by-Day Itinerary</h2>
-              <div className="space-y-8 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-pearl-200 before:to-transparent">
-                {tour.itinerary.map((day, idx) => (
-                  <div key={idx} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-pearl-50 bg-gold-400 text-forest-950 font-bold font-heading shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
-                      {day.day}
-                    </div>
-                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-3xl shadow-sm border border-pearl-200">
-                      <h3 className="font-heading font-bold text-xl text-forest-950 mb-2">{day.title}</h3>
-                      <p className="text-forest-500 font-light leading-relaxed">{day.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                <div className="space-y-8 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-pearl-200 before:to-transparent">
+                  {tour.itinerary?.map((day, idx) => (
+                    <motion.div 
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{ duration: 0.6, delay: idx * 0.1 }}
+                      key={day.day} 
+                      className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+                    >
+                      <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-pearl-100 text-forest-950 font-heading font-bold shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10 transition-colors group-hover:bg-gold-400 group-hover:text-white">
+                        {day.day}
+                      </div>
+                      <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-white border border-pearl-200 shadow-sm transition-shadow hover:shadow-md">
+                        <h4 className="font-heading font-bold text-forest-950 mb-2">{day.title}</h4>
+                        <p className="text-forest-600 font-light text-sm leading-relaxed">{day.description}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
             </section>
           )}
         </div>

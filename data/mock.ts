@@ -142,6 +142,14 @@ export const testimonials: Testimonial[] = [
     avatar: 'https://picsum.photos/seed/face2/200/200',
     rating: 5,
   },
+  {
+    id: '3',
+    name: 'Elena Rossi',
+    location: 'Rome, Italy',
+    text: 'A perfect blend of culture and relaxation. The guides were incredibly knowledgeable and the boutique hotels were breathtaking.',
+    avatar: 'https://picsum.photos/seed/face3/200/200',
+    rating: 5,
+  },
 ];
 
 export const trustBadges = [

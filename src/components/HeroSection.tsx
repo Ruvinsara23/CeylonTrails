@@ -93,37 +93,37 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="bg-white rounded-3xl lg:rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-4 flex flex-col lg:flex-row items-stretch justify-between border border-pearl-200 gap-0"
         >
-          <div className="w-full lg:flex-1 flex items-center gap-4 px-2 py-4 lg:py-0 lg:px-6 border-b lg:border-b-0 lg:border-r border-pearl-100">
-            <SolidMapPin className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6 shrink-0" />
+          <Link href="/book" className="w-full lg:flex-1 flex items-center gap-4 px-2 py-4 lg:py-0 lg:px-6 border-b lg:border-b-0 lg:border-r border-pearl-100 group cursor-pointer hover:bg-pearl-50 transition-colors rounded-t-3xl lg:rounded-t-none lg:rounded-l-2xl">
+            <SolidMapPin className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6 shrink-0 group-hover:text-gold-500 transition-colors" />
             <div className="flex-1">
               <p className="font-heading font-bold text-forest-950 text-sm">Where to?</p>
               <p className="text-forest-400 text-xs font-light">Search destinations</p>
             </div>
-          </div>
+          </Link>
           
-          <div className="w-full lg:flex-1 hidden md:flex items-center gap-4 px-2 py-4 lg:py-0 lg:px-6 border-b lg:border-b-0 lg:border-r border-pearl-100">
-            <SolidCalendar className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6 shrink-0" />
+          <Link href="/book" className="w-full lg:flex-1 hidden md:flex items-center gap-4 px-2 py-4 lg:py-0 lg:px-6 border-b lg:border-b-0 lg:border-r border-pearl-100 group cursor-pointer hover:bg-pearl-50 transition-colors">
+            <SolidCalendar className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6 shrink-0 group-hover:text-gold-500 transition-colors" />
             <div className="flex-1">
               <p className="font-heading font-bold text-forest-950 text-sm">Check in</p>
               <p className="text-forest-400 text-xs font-light">Add dates</p>
             </div>
-          </div>
+          </Link>
 
-          <div className="w-full lg:flex-1 hidden md:flex items-center gap-4 px-2 py-4 lg:py-0 lg:px-6 border-b lg:border-b-0 lg:border-r border-pearl-100">
-            <SolidCalendar className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6 shrink-0" />
+          <Link href="/book" className="w-full lg:flex-1 hidden md:flex items-center gap-4 px-2 py-4 lg:py-0 lg:px-6 border-b lg:border-b-0 lg:border-r border-pearl-100 group cursor-pointer hover:bg-pearl-50 transition-colors">
+            <SolidCalendar className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6 shrink-0 group-hover:text-gold-500 transition-colors" />
             <div className="flex-1">
               <p className="font-heading font-bold text-forest-950 text-sm">Check out</p>
               <p className="text-forest-400 text-xs font-light">Add dates</p>
             </div>
-          </div>
+          </Link>
 
-          <div className="w-full lg:flex-1 flex items-center gap-4 px-2 py-4 lg:py-0 lg:px-6 mb-4 lg:mb-0">
-            <SolidUsers className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6 shrink-0" />
+          <Link href="/book" className="w-full lg:flex-1 flex items-center gap-4 px-2 py-4 lg:py-0 lg:px-6 mb-4 lg:mb-0 group cursor-pointer hover:bg-pearl-50 transition-colors">
+            <SolidUsers className="text-forest-400 w-5 h-5 lg:w-6 lg:h-6 shrink-0 group-hover:text-gold-500 transition-colors" />
             <div className="flex-1">
               <p className="font-heading font-bold text-forest-950 text-sm">Travelers</p>
               <p className="text-forest-400 text-xs font-light">Add guests</p>
             </div>
-          </div>
+          </Link>
 
           <Link href="/book" className="w-full lg:w-auto bg-forest-950 text-white px-6 py-4 lg:px-8 lg:py-4 rounded-2xl lg:rounded-xl font-heading font-semibold flex justify-center items-center gap-2 hover:bg-gold-500 hover:text-forest-950 transition-colors shadow-md">
             Search <SolidSearch className="w-4 h-4 shrink-0" />

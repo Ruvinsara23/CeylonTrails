@@ -51,7 +51,7 @@ export default function StepDates() {
 
       {/* Date Selection */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
+        <div className="min-w-0">
           <label className="block text-sm font-semibold text-gray-700 mb-2">
             Start date
           </label>
@@ -59,10 +59,10 @@ export default function StepDates() {
             type="date"
             value={data.startDate}
             onChange={(e) => updateData({ startDate: e.target.value })}
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-jungle-green-700/20 focus:border-jungle-green-700 transition-all"
+            className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-jungle-green-700/20 focus:border-jungle-green-700 transition-all min-w-0 [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-clear-button]:hidden appearance-none"
           />
         </div>
-        <div>
+        <div className="min-w-0">
           <label className="block text-sm font-semibold text-gray-700 mb-2">
             End date
           </label>
@@ -70,7 +70,7 @@ export default function StepDates() {
             type="date"
             value={data.endDate}
             onChange={(e) => updateData({ endDate: e.target.value })}
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-jungle-green-700/20 focus:border-jungle-green-700 transition-all"
+            className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-jungle-green-700/20 focus:border-jungle-green-700 transition-all min-w-0 [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-clear-button]:hidden appearance-none"
           />
         </div>
       </div>

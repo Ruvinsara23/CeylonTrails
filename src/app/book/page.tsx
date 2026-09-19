@@ -51,11 +51,7 @@ function BookingFormContent() {
                     : 'bg-pearl-300 text-pearl-500'
                 }`}
               >
-                {step > s.number ? (
-                  <CheckCircleIcon className="w-6 h-6" />
-                ) : (
-                  s.number
-                )}
+                {s.number}
               </div>
               <span
                 className={`text-[10px] sm:text-xs mt-2 font-medium tracking-widest uppercase transition-colors text-center ${

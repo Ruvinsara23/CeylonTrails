@@ -80,7 +80,7 @@ export default function StepDates() {
         <button
           onClick={handleNext}
           disabled={!data.startDate || !data.endDate}
-          className="btn-primary disabled:opacity-40 disabled:cursor-not-allowed disabled:transform-none"
+          className="w-full sm:w-auto btn-primary disabled:opacity-40 disabled:cursor-not-allowed disabled:transform-none"
         >
           Continue to Travelers
         </button>

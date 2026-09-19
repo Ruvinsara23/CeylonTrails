@@ -62,11 +62,11 @@ export default function StepSuccess() {
       </div>
 
       {/* Actions */}
-      <div className="flex flex-col sm:flex-row gap-3 justify-center">
-        <button onClick={resetBooking} className="btn-secondary">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+        <button onClick={resetBooking} className="w-full sm:w-auto btn-secondary">
           Book Another Tour
         </button>
-        <Link href="/" className="px-8 py-3.5 rounded-xl text-gray-600 font-medium hover:bg-gray-100 transition-colors">
+        <Link href="/" className="w-full sm:w-auto px-8 py-3.5 rounded-xl text-gray-600 font-medium hover:bg-gray-100 transition-colors inline-block">
           Return Home
         </Link>
       </div>

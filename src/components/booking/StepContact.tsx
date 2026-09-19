@@ -102,17 +102,17 @@ export default function StepContact() {
       </div>
 
       {/* Navigation */}
-      <div className="flex justify-between pt-4">
+      <div className="flex flex-col-reverse sm:flex-row justify-between pt-4 gap-4">
         <button
           onClick={() => setStep(2)}
-          className="px-6 py-3 rounded-xl text-gray-600 font-medium hover:bg-gray-100 transition-colors"
+          className="w-full sm:w-auto px-6 py-3 rounded-xl text-gray-600 font-medium hover:bg-gray-100 transition-colors"
         >
           Back
         </button>
         <button
           onClick={handleSubmit}
           disabled={!data.firstName || !data.lastName || !data.email}
-          className="btn-primary disabled:opacity-40 disabled:cursor-not-allowed disabled:transform-none"
+          className="w-full sm:w-auto btn-primary disabled:opacity-40 disabled:cursor-not-allowed disabled:transform-none"
         >
           Confirm Booking
         </button>

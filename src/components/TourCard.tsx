@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ClockIcon as Clock, CheckIcon as Check, StarIcon as Star, MapPinIcon as MapPin } from '@heroicons/react/24/solid';
+import { ClockIcon as Clock, CheckCircleIcon as Check, StarIcon as Star, MapPinIcon as MapPin } from '@heroicons/react/24/solid';
 import { TourPackage } from '../../data/mock';
 
 interface TourCardProps {

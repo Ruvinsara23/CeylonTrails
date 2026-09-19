@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { MapPinIcon as MapPin, ClockIcon as Clock, CheckIcon as Check, StarIcon as Star, ArrowRightIcon as ArrowRight, BoltIcon as Activity, CameraIcon as Camera, SparklesIcon as Leaf } from '@heroicons/react/24/solid';
+import { MapPinIcon as MapPin, ClockIcon as Clock, CheckCircleIcon as Check, StarIcon as Star, ArrowRightIcon as ArrowRight, BoltIcon as Activity, CameraIcon as Camera, SparklesIcon as Leaf } from '@heroicons/react/24/solid';
 import { tourPackages } from '../../../../data/mock';
 
 export default function TourDetailPage({ params }: { params: { id: string } }) {

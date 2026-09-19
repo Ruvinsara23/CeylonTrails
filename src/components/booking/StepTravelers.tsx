@@ -78,16 +78,16 @@ export default function StepTravelers() {
       </div>
 
       {/* Navigation */}
-      <div className="flex justify-between pt-4">
+      <div className="flex flex-col-reverse sm:flex-row justify-between pt-4 gap-4">
         <button
           onClick={() => setStep(1)}
-          className="px-6 py-3 rounded-xl text-gray-600 font-medium hover:bg-gray-100 transition-colors"
+          className="w-full sm:w-auto px-6 py-3 rounded-xl text-gray-600 font-medium hover:bg-gray-100 transition-colors"
         >
           Back
         </button>
         <button
           onClick={handleNext}
-          className="btn-primary"
+          className="w-full sm:w-auto btn-primary"
         >
           Continue to Contact
         </button>
